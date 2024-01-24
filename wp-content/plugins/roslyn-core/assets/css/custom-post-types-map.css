@@ -1,0 +1,778 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   Custom Post Types styles
+   ========================================================================== */
+/* ==========================================================================
+# Testimonial style - begin
+========================================================================== */
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text {
+  /* Testimonials image  styles */
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-border-around .eltdf-testimonial-text-inner {
+  border: 1px solid #e0e4f2;
+  width: calc(100% - 2px);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-text-holder {
+  position: relative;
+  display: block;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-text-holder .eltdf-testimonial-text-inner {
+  display: block;
+  text-align: center;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-image {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-image img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-content-inner {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-text-holder {
+  position: relative;
+  padding-bottom: 18px;
+  margin-bottom: 9px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-text-holder .eltdf-testimonial-text-inner {
+  text-align: left;
+  background-color: #fff;
+  padding: 0 0 25px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-text-holder .eltdf-testimonial-text {
+  margin: 0;
+  padding: 0 20px 0 25px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-text-holder .eltdf-testimonial-title {
+  margin: 0 0 16px;
+  padding: 15px 15px 15px 25px;
+  border-bottom: 1px solid #e0e4f2;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-carousel-bottom {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-image {
+  width: 70px;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 20px 0 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-author {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-author .eltdf-testimonials-author-name,
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-author .eltdf-testimonials-author-job {
+  margin: 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed-text .eltdf-testimonial-author .eltdf-testimonials-author-job {
+  color: rgba(34, 34, 34, 0.4);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-author .eltdf-testimonials-author-job,
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-author .eltdf-testimonials-author-name {
+  color: #fff;
+}
+
+/* ==========================================================================
+# Testimonial style - end
+========================================================================== */
+/* ==========================================================================
+   Testimonials boxed style - begin
+   ========================================================================== */
+.eltdf-testimonials-holder.eltdf-testimonials-boxed {
+  /* Light/Dark styles */
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed .eltdf-testimonials {
+  margin: 0 -50px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed .eltdf-testimonial-content {
+  padding: 40px 57px 58px;
+  background-color: #fbfbfb;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed .eltdf-testimonials-author-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 9px 0 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed .eltdf-testimonials-author-holder .eltdf-testimonial-image {
+  float: left;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed .eltdf-testimonials-author-holder .eltdf-testimonial-author {
+  padding: 3px 0 0 110px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed.eltdf-testimonials-light .eltdf-testimonial-title,
+.eltdf-testimonials-holder.eltdf-testimonials-boxed.eltdf-testimonials-light .eltdf-testimonial-text,
+.eltdf-testimonials-holder.eltdf-testimonials-boxed.eltdf-testimonials-light .eltdf-testimonial-author {
+  color: #fff;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed.eltdf-testimonials-light .owl-dots .owl-dot span {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-boxed.eltdf-testimonials-light .owl-dots .owl-dot:hover span, .eltdf-testimonials-holder.eltdf-testimonials-boxed.eltdf-testimonials-light .owl-dots .owl-dot.active span {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* ==========================================================================
+   Testimonials boxed style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials elegant style - begin
+   ========================================================================== */
+.eltdf-testimonials-holder.eltdf-testimonials-carousel {
+  opacity: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 680px) {
+  .eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonials {
+    padding: 0;
+  }
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-text {
+  margin-top: 0;
+  font-size: 22px;
+  color: #595959;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-image-nav {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  max-width: 470px;
+  margin: 27px auto 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-image-nav {
+    max-width: 282px;
+  }
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-image-nav .owl-item {
+  cursor: pointer;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-image-nav .owl-item.active.center .eltdf-testimonial-image {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-image {
+  position: relative;
+  display: block;
+  width: 94px;
+  height: 94px;
+  -webkit-transform: scale(0.78723);
+  -ms-transform: scale(0.78723);
+  transform: scale(0.78723);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-image img {
+  width: 100% !important;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonial-author {
+  margin-top: 22px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-carousel .eltdf-testimonials-author-job {
+  margin-top: 8px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-title,
+.eltdf-testimonials-holder.eltdf-testimonials-light .eltdf-testimonial-text {
+  color: #fff;
+}
+
+.eltdf-owl-custom-slider {
+  position: relative;
+  display: none;
+  width: 100%;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+  /* No Js */
+  /*
+     *  Owl Carousel - Animate Plugin
+     */
+}
+
+.eltdf-owl-custom-slider.owl-loaded {
+  display: block;
+}
+
+.eltdf-owl-custom-slider.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.eltdf-owl-custom-slider.owl-hidden {
+  opacity: 0;
+}
+
+.eltdf-owl-custom-slider.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.eltdf-owl-custom-slider.owl-drag .owl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eltdf-owl-custom-slider.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.eltdf-owl-custom-slider.owl-rtl {
+  direction: rtl;
+}
+
+.eltdf-owl-custom-slider.owl-rtl .owl-item {
+  float: right;
+}
+
+.no-js .eltdf-owl-custom-slider {
+  display: block;
+}
+
+.eltdf-owl-custom-slider .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+
+.eltdf-owl-custom-slider .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.eltdf-owl-custom-slider .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.eltdf-owl-custom-slider .owl-wrapper,
+.eltdf-owl-custom-slider .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.eltdf-owl-custom-slider .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.eltdf-owl-custom-slider .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.eltdf-owl-custom-slider .owl-item img .owl-lazy {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.eltdf-owl-custom-slider .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.eltdf-owl-custom-slider .owl-nav.disabled {
+  display: none;
+}
+
+.eltdf-owl-custom-slider .owl-nav .owl-prev,
+.eltdf-owl-custom-slider .owl-nav .owl-next {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eltdf-owl-custom-slider .owl-dots.disabled {
+  display: none;
+}
+
+.eltdf-owl-custom-slider .owl-dots .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eltdf-owl-custom-slider .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.eltdf-owl-custom-slider .owl-animated-in {
+  z-index: 0;
+}
+
+.eltdf-owl-custom-slider .owl-animated-out {
+  z-index: 1;
+}
+
+.eltdf-owl-custom-slider .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+/* ==========================================================================
+   Testimonials elegant style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials image pagination style - begin
+   ========================================================================== */
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination {
+  /* Light/Dark styles */
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner {
+  visibility: hidden;
+  position: relative;
+  display: none;
+  width: 100%;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+  padding: 0 50px 0 127px;
+  text-align: center;
+  /* No Js */
+  /*
+             *  Owl Carousel - Animate Plugin
+             */
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .eltdf-testimonial-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 25px 0 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .eltdf-testimonial-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .eltdf-testimonial-title {
+  margin: 0;
+  text-align: left;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .eltdf-testimonial-author {
+  text-align: left;
+  margin: 29px 0 0 1px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .eltdf-testimonials-author-job {
+  margin: 0;
+  text-align: left;
+  color: #222222;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .eltdf-testimonial-text {
+  margin: 19px 0 0;
+  font-size: 30px;
+  text-align: left;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 42px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-stage-outer {
+  z-index: 1;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.eltdf-slider-is-moving .owl-item .eltdf-block-drag-link {
+  z-index: -1 !important;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-carousel .owl-item img {
+  -webkit-transform: translateZ(0);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-loaded {
+  display: block;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-hidden {
+  opacity: 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-drag .owl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-rtl {
+  direction: rtl;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner.owl-rtl .owl-item {
+  float: right;
+}
+
+.no-js .eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner {
+  display: block;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-wrapper,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-item img .owl-lazy {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-nav.disabled {
+  display: none;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-nav .owl-prev,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-nav .owl-next {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-animated-in {
+  z-index: 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .owl-animated-out {
+  z-index: 1;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .eltdf-testimonials-image-pagination-inner .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination {
+  list-style: none;
+  display: inline-block;
+  top: 17px;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination .eltdf-tsp-item {
+  position: relative;
+  display: inline-block;
+  float: left;
+  height: 35px;
+  width: 35px;
+  margin: 0 7px 7px 0;
+  cursor: pointer;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination .eltdf-tsp-item:nth-child(2n+1) {
+  clear: both;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination .eltdf-tsp-item img {
+  position: relative;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination .eltdf-tsp-item:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination .eltdf-tsp-item.active:after, .eltdf-testimonials-holder.eltdf-testimonials-image-pagination #eltdf-testimonial-pagination .eltdf-tsp-item:hover:after {
+  opacity: 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .owl-nav {
+  text-align: left;
+  margin-top: 3px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .owl-nav .owl-prev,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .owl-nav .owl-next {
+  position: relative;
+  display: inline-block;
+  top: auto;
+  bottom: 0;
+  -webkit-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .owl-nav .owl-prev {
+  left: -1px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination .owl-nav .owl-next {
+  left: 12px;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .eltdf-testimonial-title,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .eltdf-testimonial-text,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .eltdf-testimonial-author {
+  color: #fff;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .owl-nav .owl-prev,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .owl-nav .owl-next {
+  color: #fff;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .owl-nav .owl-prev:hover,
+.eltdf-testimonials-holder.eltdf-testimonials-image-pagination.eltdf-testimonials-light .owl-nav .owl-next:hover {
+  color: #222222;
+}
+
+/* ==========================================================================
+   Testimonials image pagination style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+.eltdf-testimonials-holder.eltdf-testimonials-standard {
+  text-align: center;
+  /* Light/Dark styles */
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard .eltdf-testimonial-image {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 25px 0 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard .eltdf-testimonial-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard .eltdf-testimonial-title {
+  margin: 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard .eltdf-testimonial-author {
+  margin: 24px 0 0;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard .eltdf-testimonial-text {
+  margin: 19px 0 0;
+  color: #a7a9ac;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard.eltdf-testimonials-light .eltdf-testimonial-title,
+.eltdf-testimonials-holder.eltdf-testimonials-standard.eltdf-testimonials-light .eltdf-testimonial-text,
+.eltdf-testimonials-holder.eltdf-testimonials-standard.eltdf-testimonials-light .eltdf-testimonial-author {
+  color: #fff;
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard.eltdf-testimonials-light .owl-dots .owl-dot span {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.eltdf-testimonials-holder.eltdf-testimonials-standard.eltdf-testimonials-light .owl-dots .owl-dot:hover span, .eltdf-testimonials-holder.eltdf-testimonials-standard.eltdf-testimonials-light .owl-dots .owl-dot.active span {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+.eltdf-testimonials-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.eltdf-testimonials-holder .eltdf-testimonials,
+.eltdf-testimonials-holder .eltdf-testimonial-content,
+.eltdf-testimonials-holder .eltdf-testimonial-text-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.eltdf-testimonials-holder .eltdf-testimonials {
+  padding: 0 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.eltdf-testimonials-holder .eltdf-testimonial-image img {
+  width: auto !important;
+  border-radius: 5em;
+}
+
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/roslyn-core/assets/css/custom-post-types-map.css.map */

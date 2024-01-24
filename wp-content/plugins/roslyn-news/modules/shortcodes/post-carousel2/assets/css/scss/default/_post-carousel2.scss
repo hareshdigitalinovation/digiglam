@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Post Carousel 2 layout style - begin
+   ========================================================================== */
+
+.eltdf-post-carousel2 {
+
+	.eltdf-layout2-item{
+		.eltdf-ni-content{
+			left: 0;
+			top: 100%;
+			width: 100%;
+			padding-top: 25px;
+		}
+	}
+
+	.eltdf-owl-slider .owl-dots {
+		bottom: -50px;
+
+		.owl-dot {
+
+			span {
+				background-color: rgba($default-heading-color, .1);
+			}
+
+			&:hover,
+			&.active {
+
+				span {
+					background-color: $default-heading-color;
+				}
+			}
+		}
+	}
+	
+	&.eltdf-news-skin-light {
+		
+		.eltdf-owl-slider {
+			
+			.owl-dots {
+				
+				.owl-dot {
+					
+					span {
+						background-color: rgba($default-heading-color, .9);
+					}
+					
+					&:hover,
+					&.active {
+						
+						span {
+							background-color: $default-heading-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Post Carousel 2 layout style  - end
+   ========================================================================== */

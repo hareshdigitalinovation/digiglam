@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Weather Widget style - begin
+   ========================================================================== */
+
+.widget.eltdf-news-weather-widget {
+	
+	&.eltdf-news-weather-simple {
+		
+		.eltdf-weather-date,
+		.eltdf-weather-temperature {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		&.eltdf-news-weather-days-1 {
+			
+			.eltdf-news-weather-single {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			.eltdf-weather-city {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 7px;
+			}
+		}
+	}
+	
+	&.eltdf-news-weather-skin-dark {
+		color: #000;
+	}
+	
+	&.eltdf-news-weather-skin-light {
+		color: #fff;
+	}
+	
+	.eltdf-ws-more {
+		@include eltdfTableLayout();
+		
+		.eltdf-news-ws-left {
+			display: table-cell;
+			vertical-align: top;
+			width: 40%;
+		}
+		
+		.eltdf-news-ws-right {
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.eltdf-news-weather-icon:before {
+			content: '';
+			font-size: 50px;
+			font-family: 'IonIcons';
+		}
+		
+		.eltdf-news-ws-mist:before {
+			content: "\f475";
+		}
+		
+		.eltdf-news-ws-snow:before,
+		.eltdf-news-ws-light-snow:before {
+			content: "\f4ae";
+		}
+		
+		.eltdf-news-ws-thunderstorm:before {
+			content: "\f4bc";
+		}
+		
+		.eltdf-news-ws-rain:before,
+		.eltdf-news-ws-drizzle:before,
+		.eltdf-news-ws-light-rain:before,
+		.eltdf-news-ws-moderate-rain:before,
+		.eltdf-news-ws-light-intensity-drizzle:before,
+		.eltdf-news-ws-light-intensity-shower-rain:before {
+			content: "\f494";
+		}
+		
+		.eltdf-news-ws-shower-rain:before {
+			content: "\f495";
+		}
+		
+		.eltdf-news-ws-broken-clouds:before {
+			content: "\f410";
+		}
+		
+		.eltdf-news-ws-scattered-clouds:before,
+		.eltdf-news-ws-few-clouds:before {
+			content: "\f40f";
+		}
+		
+		.eltdf-news-ws-clear-sky:before,
+		.eltdf-news-ws-sun:before {
+			content: "\f4b6";
+		}
+		
+		.eltdf-weather-top-part {
+			margin-bottom: 15px;
+			
+			.eltdf-weather-city {
+				color: #000;
+			}
+		}
+	}
+	
+	.eltdf-news-weather-other-days {
+		@include eltdfTableLayout();
+		margin-top: 15px;
+		
+		.eltdf-news-weather-single {
+			display: table-cell;
+			vertical-align: bottom;
+			text-align: center;
+		}
+	}
+}
+/* ==========================================================================
+   Weather Widget style - end
+   ========================================================================== */

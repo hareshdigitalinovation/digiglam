@@ -1,0 +1,258 @@
+/* ==========================================================================
+   Social Share shortcode style - begin
+   ========================================================================== */
+
+.eltdf-social-share-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* List type - begin
+========================================================================== */
+.eltdf-social-share-holder.eltdf-list {
+
+    .eltdf-social-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        color: $default-text-color;
+        font-weight: 600;
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        margin: 0 -1px 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            font-size: 17px;
+            border: 1px solid $default-heading-color;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+
+            &:hover{
+                background-color: $default-heading-color;
+                @include eltdfTransition(all .2s ease-in-out);
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* List type - end
+========================================================================== */
+
+/* Dropdown type - begin
+========================================================================== */
+
+$socialShareWidth: 36px;
+$socialShareHeight: 36px;
+
+.eltdf-social-share-holder.eltdf-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &.eltdf-follow-us-wrapper {
+        padding: 35px 23px;
+        vertical-align: unset;
+
+        .eltdf-social-share-dropdown-opener{
+            >i {
+                font-size: 12px;
+                padding-right: 4px;
+            }
+            >span {
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: .12em;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .eltdf-social-share-dropdown-opener {
+        display: block;
+        line-height: 1em;
+        text-align: center;
+        font-size: 18px;
+        color: $first-main-color;
+        padding-left: 8px;
+
+        .social_share {
+            font-size: 18px;
+            color: $default-heading-color;
+        }
+
+        &:hover {
+            color: $first-main-color;
+
+            .social_share {
+                color: inherit;
+            }
+        }
+    }
+
+    .eltdf-social-share-dropdown {
+        position: relative;
+        visibility: hidden;
+        z-index: 950;
+        right: 0;
+        top: -27px;
+
+
+
+        ul {
+            position: relative;
+            display: block;
+            z-index: 990;
+            margin: 0;
+            padding: 0 !important;
+        }
+
+        ul li {
+            width: $socialShareWidth;
+            height: $socialShareHeight;
+            line-height: $socialShareHeight;
+            visibility: hidden;
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+            padding: 0;
+            border: 1px solid $default-heading-color;
+            background-color: #fff;
+            font-size: 12px;
+            color: $default-heading-color;
+            box-sizing: border-box;
+            @include eltdfTransition( all .2s ease-out);
+
+            &:hover {
+                border: 1px solid $default-heading-color;
+                background-color: $default-heading-color;
+                color: #fff;
+                @include eltdfTransition( all .2s ease-out);
+            }
+            
+            * {
+                display: block;
+                line-height: inherit;
+            }
+
+            a {
+                color: inherit !important;
+            }
+
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) {
+                    left: #{-$i*(($socialShareWidth - 1))};
+                }
+            }
+        }
+
+        &.eltdf-follow-us {
+            top: 100%;
+            right: -20px;
+            background-color: $default-heading-color;
+            width: 212px;
+            height: 50px;
+            position: absolute;
+            padding: 32px 10px;
+            text-align: center;
+            display: table;
+
+            ul{
+                li {
+                    left: 0;
+                    display: inline-block;
+                    position: relative;
+                    border-color: #fff;
+                    color: #fff;
+                    background-color: transparent;
+
+                    &:hover{
+                        background-color: #fff;
+                        color: $default-heading-color;
+                    }
+                }
+            }
+
+            .eltdf-social-share-link {
+                position: relative;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: .12em;
+                color: #fff;
+                padding-top: 25px;
+                display: inline-block;
+
+                &:hover:after {
+                    height: 3px;
+                    @include eltdfTransition(all .2s ease-in);
+                }
+
+                &:after {
+                    content: '';
+                    background-color: #fff;
+                    height: 1px;
+                    width: 100%;
+                    left: 0;
+                    bottom: -5px;
+                    position: absolute;
+                    @include eltdfTransition(all .2s ease-out);
+                }
+            }
+        }
+    }
+}
+
+.eltdf-social-share-holder.eltdf-dropdown:hover {
+
+    .eltdf-social-share-dropdown ul li,
+    .eltdf-social-share-dropdown.eltdf-follow-us .eltdf-social-share-link {
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .eltdf-social-share-dropdown.eltdf-follow-us {
+        visibility: visible;
+    }
+
+    .eltdf-social-share-dropdown ul li {
+
+        /* opacity and visibility need to be different, but not background-color */
+        @for $i from 2 through 7 {
+            &:nth-child(#{$i}) {
+                @include eltdfTransition( opacity .2s ease-out #{($i)/10+s}, visibility .2s ease-out #{($i)/10+s}, background-color .2s ease-out);
+            }
+        }
+    }
+}
+
+/* Dropdown type - end
+========================================================================== */
+
+/* ==========================================================================
+   Social Share shortcode style - end
+   ========================================================================== */

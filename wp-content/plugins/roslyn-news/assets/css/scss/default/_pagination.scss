@@ -1,0 +1,219 @@
+/* ==========================================================================
+   News shortcodes pagination standard style - begin
+   ========================================================================== */
+
+.eltdf-news-holder {
+	
+	&.eltdf-news-pag-standard {
+		
+		.eltdf-news-list-inner {
+			opacity: 1;
+			@include eltdfTransition(opacity .2s ease-out);
+		}
+		
+		&.eltdf-news-standard-pag-animate {
+			
+			.eltdf-news-list-inner {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.eltdf-news-standard-pagination {
+	@include eltdfRelativeHolderLayout();
+	margin: 0 0 20px;
+	clear: both;
+	text-align: center;
+	
+	ul {
+		@include eltdfRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		text-align: left;
+		
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 6px 0 0;
+			padding: 0;
+			text-align: center;
+			
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+				padding: 0;
+				font-size: 14px;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				background-color: $default-heading-color;
+				border: 1px solid $default-heading-color;
+				color: #fff;
+				box-sizing: border-box;
+				@include eltdfTransition(all .2s ease);
+			}
+			
+			&.eltdf-news-pag-active,
+			&:hover {
+				
+				a {
+					color: $default-heading-color;
+					background-color: #fff;
+					@include eltdfTransition(all .2s ease);
+				}
+			}
+			
+			&.eltdf-news-pag-prev,
+			&.eltdf-news-pag-next {
+				
+				a {
+					font-size: 14px;
+					@include eltdfTransition(color .2s ease-out, opacity .2s ease-out);
+					
+					span {
+						display: block;
+						line-height: inherit;
+						
+						&:before {
+							display: block;
+							line-height: inherit;
+						}
+					}
+				}
+			}
+			
+			&.eltdf-news-pag-prev {
+				display: none;
+			}
+			
+			&.eltdf-news-pag-next {
+				display: inline-block;
+			}
+
+			&.eltdf-news-pag-first-page {
+				display: none;
+			}
+			
+			&.eltdf-news-pag-last-page {
+				display: inline-block;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   News shortcodes pagination standard style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   News shortcodes pagination load more style - begin
+   ========================================================================== */
+
+.eltdf-news-load-more-pagination {
+	@include eltdfRelativeHolderLayout();
+	margin: 15px 0 30px;
+	text-align: center;
+
+	&.eltdf-light-pagination-skin {
+		.eltdf-btn.eltdf-btn-outline:not(.eltdf-btn-custom-border-hover) {
+			color: #fff !important;
+			border-color: #fff !important;
+
+			&:hover {
+				color: #fff !important;
+				border-color: #fff !important;
+				background-color: transparent !important;
+
+				.eltdf-btn-line {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   News shortcodes load more style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   News shortcodes loading element style - begin
+   ========================================================================== */
+
+.eltdf-news-pag-loading {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 40px 0 20px;
+	color: $default-heading-color;
+	text-align: center;
+	
+	&.eltdf-news-pag-standard-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	}
+	
+	&.eltdf-showing {
+		display: block;
+	}
+	
+	> div {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 14px;
+		height: 14px;
+		margin: 0 3px;
+		background-color: $default-heading-color;
+		border-radius: 100%;
+		@include eltdfAnimation(news-pag-bouncedelay 1.4s infinite ease-in-out both);
+	}
+	
+	.eltdf-news-pag-bounce1 {
+		-webkit-animation-delay: -0.32s;
+		-moz-animation-delay: -0.32s;
+		animation-delay: -0.32s;
+	}
+	
+	.eltdf-news-pag-bounce2 {
+		-webkit-animation-delay: -0.16s;
+		-moz-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+	}
+}
+
+@-webkit-keyframes news-pag-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+	}
+}
+
+@-moz-keyframes news-pag-bouncedelay {
+	0%, 80%, 100% {
+		-moz-transform: scale(0);
+	}
+	40% {
+		-moz-transform: scale(1.0);
+	}
+}
+
+@keyframes news-pag-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+/* ==========================================================================
+   News shortcodes loading element style - end
+   ========================================================================== */

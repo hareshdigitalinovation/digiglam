@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Post Carousel 1 layout style - begin
+   ========================================================================== */
+
+.eltdf-post-carousel1 {
+
+	.eltdf-layout2-item{
+		.eltdf-ni-content{
+			left: 10%;
+			top: calc(100% - 80px);
+			width: calc(100% - 20%);
+			padding-top: 31px;
+		}
+	}
+	
+	&.eltdf-news-skin-light {
+		
+		.eltdf-owl-slider {
+			.owl-nav {
+				.owl-prev,
+				.owl-next {
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+	.eltdf-owl-slider {
+		
+		&.eltdf-slider-has-both-nav {
+			.owl-nav {
+				.owl-prev,
+				.owl-next {
+					@include eltdfTransform(translateY(-50%));
+				}
+			}
+		}
+		
+		.owl-dots {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 100%;
+			margin: 0;
+			z-index: 1;
+			@include eltdfTransform(translateX(-50%));
+
+			.owl-dot {
+				
+				span {
+					background-color: $default-border-color;
+				}
+				
+				&:hover,
+				&.active {
+					
+					span {
+						background-color: $first-main-color;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Post Carousel 1 layout style  - end
+   ========================================================================== */

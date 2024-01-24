@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   Widgets styles
+   ========================================================================== */
+/* ==========================================================================
+   Instagram widget style - begin
+   ========================================================================== */
+aside.eltdf-sidebar .widget.widget_eltdf_instagram_widget,
+.wpb_widgetised_column .widget.widget_eltdf_instagram_widget {
+  border: 1px solid #4d4d4d;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+aside.eltdf-sidebar .widget.widget_eltdf_instagram_widget .eltdf-widget-title,
+.wpb_widgetised_column .widget.widget_eltdf_instagram_widget .eltdf-widget-title {
+  margin: 0 0 25px;
+}
+
+.eltdf-instagram-topic {
+  text-align: right;
+  font-family: "TuesdayNight";
+  line-height: 2em;
+  font-size: 30px;
+}
+
+.eltdf-instagram-feed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eltdf-instagram-feed li {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none !important;
+}
+
+.eltdf-instagram-feed li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.eltdf-instagram-feed li a .eltdf-instagram-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.eltdf-instagram-feed li a:hover .eltdf-instagram-icon {
+  opacity: 1;
+}
+
+.eltdf-instagram-feed li a:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.eltdf-instagram-feed li img {
+  width: 100%;
+  display: block;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-no-space {
+  margin: 0;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-no-space li {
+  padding: 0 0px;
+  margin: 0 0 0px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-tiny-space {
+  margin: 0 -3px -6px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-tiny-space li {
+  padding: 0 3px;
+  margin: 0 0 6px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-small-space {
+  margin: 0 -10px -20px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-small-space li {
+  padding: 0 10px;
+  margin: 0 0 20px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-normal-space {
+  margin: 0 -15px -30px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-normal-space li {
+  padding: 0 15px;
+  margin: 0 0 30px;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-2 li {
+  width: 50%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-3 li {
+  width: 33.33333%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-4 li {
+  width: 25%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-6 li {
+  width: 16.66667%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-8 li {
+  width: 12.5%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-gallery.eltdf-col-9 li {
+  width: 11.11111%;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-carousel li {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.eltdf-instagram-feed.eltdf-instagram-carousel li a {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Instagram widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/roslyn-instagram-feed/assets/css/widget-map.css.map */

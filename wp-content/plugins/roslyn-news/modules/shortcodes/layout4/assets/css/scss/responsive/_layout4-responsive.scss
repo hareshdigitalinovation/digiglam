@@ -1,0 +1,7 @@
+.eltdf-layout4-item{
+    @include ipad-landscape{
+        .eltdf-ni-inner > div{
+            width: 100%;
+        }
+    }
+}

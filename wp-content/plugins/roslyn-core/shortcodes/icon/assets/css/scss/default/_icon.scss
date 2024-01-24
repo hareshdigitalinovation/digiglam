@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Icon shortcode style - begin
+   ========================================================================== */
+
+.eltdf-icon-shortcode {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+	line-height: 1.1em;
+	
+    &.eltdf-circle,
+    &.eltdf-square {
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        background-color: #fff;
+        @include eltdfTransition(all .2s ease-in-out);
+        border: 1px solid $default-heading-color;
+        box-sizing: border-box;
+
+        a {
+	        position: relative;
+	        display: inline-block;
+	        vertical-align: top;
+	        width: 100%;
+	        height: 100%;
+
+            &:hover{
+                background-color: $default-heading-color;
+                @include eltdfTransition(all .2s ease-in-out);
+
+                .eltdf-icon-element{
+                    color: #fff;
+                }
+            }
+        }
+
+        .eltdf-icon-element {
+            color: $default-heading-color;
+            line-height: inherit;
+        }
+    }
+
+    &.eltdf-circle {
+        border-radius: 50%;
+    }
+
+    .eltdf-icon-element {
+	    display: block;
+	    line-height: inherit;
+        @include eltdfTransition(all .15s ease-in-out);
+	    
+	    &:before {
+		    display: block;
+		    line-height: inherit;
+	    }
+    }
+}
+
+.eltdf-icon-animation-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+    @include eltdfTransform(scale(0));
+    @include eltdfTransition(transform 0.15s ease-in-out);
+
+    &.eltdf-icon-animation-show {
+        @include eltdfTransform(scale(1));
+    }
+}
+
+.eltdf-icon-tiny {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+.eltdf-icon-small {
+    font-size: 2em;
+}
+
+.eltdf-icon-medium {
+    font-size: 3em;
+}
+
+.eltdf-icon-large {
+    font-size: 4em;;
+}
+
+.eltdf-icon-huge {
+    font-size: 5em;
+}
+/* ==========================================================================
+   Icon shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Post Tabs start styles
+   ========================================================================== */
+
+.eltdf-plw-tabs {
+	@include eltdfRelativeHolderLayout();
+
+	.eltdf-plw-tabs-inner {
+
+		.eltdf-drop-down & {
+
+			.eltdf-plw-tabs-tabs-holder {
+
+				.eltdf-plw-tabs-tab {
+					margin: 0;
+
+					a {
+						position: relative;
+						display: block;
+						height: auto;
+						color: #fff;
+						font-family: inherit;
+						padding: 6px 0;
+						float: none;
+						@include eltdfTransition(color .15s ease-in-out);
+					}
+				}
+
+			}
+		}
+	}
+
+	.eltdf-layout1-item{
+		min-height: 300px;
+
+		.eltdf-ni-content::before {
+			color: #fff;
+		}
+
+		.eltdf-post-title {
+			a{
+				font-size: inherit;
+				letter-spacing: 0;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.eltdf-news-holder{
+		.eltdf-news-list-inner {
+			display: table;
+			height: 100%;
+		}
+
+		.eltdf-ni-info > div {
+			color: #fff;
+
+			a:hover{
+				color: #fff;
+			}
+		}
+	}
+
+	.eltdf-plw-tabs-tab:first-child a {
+		padding-top: 0;
+	}
+
+	.eltdf-plw-tabs-inner{
+		@include eltdfColumnsHolder();
+	}
+
+	.eltdf-plw-tabs-tabs-holder{
+		width: 25%;
+		@include eltdfColumnsItem();
+
+		.eltdf-plw-tabs-tab a {
+
+			.item_text {
+				position: relative;
+				display: block;
+				padding: 0 30px 0 0;
+				margin: 0;
+				overflow: hidden;
+				@include eltdfTransition(padding .2s ease-in-out);
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: -20px;
+					color: inherit;
+					font-size: 18px;
+					width: 4px;
+					height: 4px;
+					border-radius: 100%;
+					background-color: #fff;
+					line-height: inherit;
+					text-rendering: auto;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					@include eltdfTransform(translateY(-50%));
+					@include eltdfTransition(left .2s ease-in-out);
+				}
+			}
+
+			&:hover {
+
+				.item_text {
+					padding: 0 15px;
+
+					&:after {
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.eltdf-plw-tabs-content-holder{
+		position: relative;
+		float: right;
+		width: 75%;
+
+		.eltdf-plw-tabs-content{
+			opacity: 0;
+			@include eltdfColumnsItem();
+			position: absolute;
+			width: 100%;
+			max-width: 100%;
+			z-index: 1;
+			@include eltdfTransition(opacity 0.23s);
+
+			&.eltdf-plw-tabs-active-item {
+				opacity: 1;
+				z-index: 2;
+			}
+		}
+	}
+
+	.eltdf-pt-six-item {
+		margin: 0 0 5px;
+	}
+
+	.eltdf-pt-six-item .eltdf-pt-six-info-section > div{
+		color:#a8a7a7;
+	}
+}
+
+/* ==========================================================================
+   Post Tabs end styles
+   ========================================================================== */

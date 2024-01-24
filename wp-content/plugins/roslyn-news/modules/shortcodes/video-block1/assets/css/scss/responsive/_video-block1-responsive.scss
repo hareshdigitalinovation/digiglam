@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Video Block 1 Responsive style - begin
+   ========================================================================== */
+
+    .eltdf-video-block1 {
+        &.eltdf-news-holder.eltdf-news-block-pp-two-half{
+            .eltdf-news-block-part-featured,
+            .eltdf-news-block-part-non-featured {
+                @include ipad-landscape {
+                    width: 100%;
+                }
+            }
+
+            .eltdf-video-layout1-item {
+                @include phone-landscape {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+/* ==========================================================================
+   Video Block 1 Responsive style - end
+   ========================================================================== */

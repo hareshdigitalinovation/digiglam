@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.eltdf-pricing-tables {
+    @include eltdfRelativeHolderLayout();
+    clear: both;
+	
+	.eltdf-pt-wrapper {
+        position: relative;
+    }
+	
+	$pricing_table_columns: ('eltdf-two-columns', 'eltdf-three-columns', 'eltdf-four-columns', 'eltdf-five-columns');
+    @for $i from 0 to length($pricing_table_columns) {
+        &.#{nth($pricing_table_columns, $i+1)} {
+            $column_width: 100%/($i+2);
+	
+	        .eltdf-price-table {
+                width: $column_width;
+            }
+        }
+    }
+}
+
+.eltdf-price-table {
+    position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	float: left;
+    box-sizing: border-box;
+
+    .eltdf-pt-inner {
+        @include eltdfRelativeHolderLayout();
+        background-color: #f9f9f9;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 17px 30px;
+                text-align: center;
+
+                &.eltdf-pt-title-holder {
+                    position: relative;
+                    color: $default-heading-color;
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-weight: 600;
+	                letter-spacing: 1px;
+	                
+                    .eltdf-pt-title {
+                        display: block;
+	                    padding: 17px 0 32px;
+	                    border-bottom: 1px solid #7d7d7d;
+	                    box-sizing: border-box;
+                    }
+                }
+
+                &.eltdf-pt-prices {
+                    position: relative;
+					padding: 33px 15px 0;
+	                
+                    .eltdf-pt-value {
+                        position: relative;
+                        vertical-align: super;
+                        bottom: 2px;
+                        font-size: 24px;
+                        line-height: 1em;
+                        font-weight: 600;
+                        color: $default-heading-color;
+                    }
+
+                    .eltdf-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+	                    left: -5px;
+                        font-size: 48px;
+                        line-height: 1em;
+                        font-weight: 600;
+                        color: $default-heading-color;
+                    }
+
+                    .eltdf-pt-mark {
+                        position: relative;
+                        display: block;
+	                    margin: 1px 0 0;
+                    }
+                }
+
+                &.eltdf-pt-content {
+	                padding: 16px 15px;
+                }
+
+                &.eltdf-pt-button {
+                    padding: 28px 15px 70px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

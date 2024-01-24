@@ -1,0 +1,7 @@
+.eltdf-layout5-item{
+    @include ipad-portrait{
+        .eltdf-ni-inner > div{
+            width: 100%;
+        }
+    }
+}

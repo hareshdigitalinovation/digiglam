@@ -1,0 +1,29 @@
+.eltdf-post-single-image-full{
+	.eltdf-news-post-top-holder{
+		position: relative;
+		margin-bottom: 50px;
+
+		.eltdf-top-part-post-image{
+			width: 100%;
+			text-align: center;
+
+			img{
+				vertical-align: middle;
+			}
+		}
+
+		.eltdf-npt-info-bottom{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+
+			.eltdf-npt-info-bottom-inner{
+				display: inline-block;
+				vertical-align: middle;
+				background-color: #fff;
+				padding: 3px 7px;
+			}
+		}
+	}
+}

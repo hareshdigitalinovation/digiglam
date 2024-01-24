@@ -1,0 +1,11 @@
+@media only screen and (max-width: 1024px){
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+h1 { font-size: 40px;line-height: 46px;}h2 { font-size: 35px;line-height: 42px;}}
+
+@media only screen and (min-width: 681px) and (max-width: 768px){
+h1 { font-size: 36px;line-height: 40px;}h2 { font-size: 32px;line-height: 39px;}}
+
+@media only screen and (max-width: 680px){
+h1 { font-size: 32px;line-height: 38px;}h2 { font-size: 26px;line-height: 30px;}h3 { font-size: 22px;line-height: 26px;}}

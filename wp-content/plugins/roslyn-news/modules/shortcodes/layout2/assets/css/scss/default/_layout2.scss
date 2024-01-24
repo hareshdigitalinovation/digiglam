@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Layout 2 style - begin
+   ========================================================================== */
+
+.eltdf-layout2-item {
+	
+	.eltdf-ni-inner {
+		@include eltdfRelativeHolderLayout();
+		margin-bottom: 120px;
+	}
+	
+	.eltdf-ni-image-holder {
+		@include eltdfRelativeHolderLayout();
+	}
+	
+	.eltdf-ni-content {
+		position: absolute;
+		top: calc(100% - 65px);
+		left: 8%;
+		width: 84%;
+		padding: 21px 4% 20px;
+		background-color: #fff;
+		box-sizing: border-box;
+		
+		.eltdf-news-skin-light & {
+			background-color: $first-main-color;
+		}
+
+		&.eltdf-ni-transparent{
+			background-color: transparent !important;
+		}
+	}
+
+	.eltdf-post-excerpt-holder{
+		padding: 14px 0 0;
+	}
+	
+	.eltdf-ni-info-top {
+		margin-bottom: 10px;
+	}
+	
+	.eltdf-ni-info-bottom {
+		position: relative;
+
+		.eltdf-btn{
+			float: left;
+			display: inline-block;
+			margin-top: 25px;
+		}
+	}
+
+	.eltdf-post-info-author{
+		display: inline-block;
+
+		&.eltdf-author-style{
+			.eltdf-post-info-author-text{
+				font-size: 38px;
+				font-family: $additional-font;
+				text-transform: lowercase;
+				line-height: 1em;
+				vertical-align: sub;
+			}
+
+			.eltdf-post-info-author-link{
+				font-size: 14px;
+			}
+		}
+	}
+
+	.eltdf-blog-share{
+		float: right;
+		padding-top: 40px;
+	}
+
+	.eltdf-ni-image-wrapper {
+	    position: relative;
+	}
+
+	.eltdf-ni-image-parallax-holder {
+	    @include eltdfAbsoluteHolderLayout();
+	    overflow: hidden;
+
+	    .eltdf-ni-image-parallax-image {
+	        position: absolute;
+	        top: 0;
+	        height: calc(100% + 200px);
+	        left: 0;
+	        width: 100%;
+	        background-size: cover;
+	        background-position: center;
+	    }
+	}
+}
+
+.eltdf-veh-parallax-layout {
+	
+	.no-touch & .eltdf-post-image {
+		position: relative;
+	    z-index: 20;
+
+		img {
+			visibility: hidden;
+		}
+	}
+
+	.touch & {
+		.eltdf-ni-image-parallax-holder {
+			display: none;
+		}
+	}
+}
+
+/* ==========================================================================
+   Layout 2 shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,99 @@
+# Copyright (C) 2023 Elated Themes
+# This file is distributed under the same license as the Roslyn Instagram Feed plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Roslyn Instagram Feed 2.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/roslyn-instagram-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-03-21T14:45:11+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: roslyn-instagram-feed\n"
+
+#. Plugin Name of the plugin
+msgid "Roslyn Instagram Feed"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds Instagram feed functionality to our theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Elated Themes"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:13
+msgid "Roslyn Instagram Widget"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:15
+msgid "Display your Instagram feed"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:27
+msgid "Title"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:32
+msgid "Type"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:34
+msgid "Gallery"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:35
+msgid "Carousel"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:41
+msgid "Number of Columns"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:43
+msgid "Two"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:44
+msgid "Three"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:45
+msgid "Four"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:46
+msgid "Six"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:47
+msgid "Eight"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:48
+msgid "Nine"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:54
+msgid "Number of Photos"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:59
+msgid "Space Between Items"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:65
+msgid "Show Instagram Icon"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:71
+msgid "Images Cache Time"
+msgstr ""
+
+#: widgets/roslyn-instagram-widget.php:76
+msgid "Instagram Topic"
+msgstr ""

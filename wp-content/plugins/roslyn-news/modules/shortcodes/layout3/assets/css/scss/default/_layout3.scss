@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Layout 3 style - begin
+   ========================================================================== */
+
+.eltdf-layout3-item {
+	
+	.eltdf-ni-inner {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+
+		.eltdf-news-columns-1 &{
+			border-bottom: 1px solid $default-border-color;
+			padding-bottom: 28px;
+		}
+		
+		> div {
+			position: relative;
+			display: table-cell;
+			vertical-align: top;
+			width: 50%;
+		}
+	}
+	
+	.eltdf-ni-image-holder {
+		padding-right: 18px;
+	}
+	
+	.eltdf-ni-image-inner {
+		position: relative;
+	}
+	
+	.eltdf-ni-content {
+		padding-left: 12px;
+	}
+	
+	.eltdf-ni-info-top {
+		margin: -5px 0 13px;
+	}
+	
+	.eltdf-ni-info-bottom {
+		margin-top: 6px;
+	}
+	
+	.eltdf-post-excerpt-holder {
+		margin-top: 18px;
+	}
+
+	.eltdf-blog-share{
+		padding-top: 15px;
+		float: right;
+	}
+}
+/* ==========================================================================
+   Layout 3 shortcode style - end
+   ========================================================================== */

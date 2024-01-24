@@ -1,0 +1,10 @@
+.eltdf-video-block2 {
+    .eltdf-news-block-part-non-featured .eltdf-news-item {
+        @include ipad-landscape {
+            width: 50%;
+        }
+        @include phone-landscape {
+            width: 100%;
+        }
+    }
+}

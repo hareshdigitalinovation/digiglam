@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Layout 6 style - responsive begin
+   ========================================================================== */
+
+.eltdf-layout6-item {
+    @include ipad-landscape {
+        .eltdf-ni-inner > div {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .eltdf-ni-info-bottom {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .eltdf-blog-share {
+            padding-top: 10px;
+        }
+    }
+}
+
+/* ==========================================================================
+   Layout 6 style - responsive end
+   ========================================================================== */

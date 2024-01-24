@@ -1,0 +1,95 @@
+/* ==========================================================================
+   News Reviews style - begin
+   ========================================================================== */
+
+.eltdf-news-reviews-holder {
+	
+	.eltdf-news-review-title-holder {
+		@include eltdfTableLayout();
+		border: 1px solid $default-border-color;
+		box-sizing: border-box;
+	}
+	
+	.eltdf-news-review-title {
+		@include eltdfTableCellLayout();
+		padding: 15px 22px;
+	}
+	
+	.eltdf-news-review-average {
+		@include eltdfTableCellLayout();
+		text-align: right;
+		padding: 15px 22px;
+		
+		.eltdf-news-review-no {
+			margin-right: 5px;
+		}
+	}
+	
+	.eltdf-news-reviews {
+		padding: 10px 22px;
+		border-width: 0 1px 1px;
+		border-color: $default-border-color;
+		border-style: solid;
+	}
+	
+	.eltdf-news-review-item {
+		padding: 5px 0;
+		.eltdf-review-item-title {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 7px;
+		}
+		
+		.eltdf-review-item-value {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	
+	.eltdf-news-review-summary-holder {
+		padding: 15px 22px;
+		border-width: 0 1px 1px;
+		border-color: $default-border-color;
+		border-style: solid;
+		
+		.eltdf-news-summary-title {
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.eltdf-news-review-stars-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	line-height: inherit;
+	
+	.eltdf-news-review-stars {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #f6e417;
+		font-size: 0;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	
+	.eltdf-news-review-stars-all {
+		font-size: 0;
+	}
+	
+	.eltdf-news-review-stars,
+	.eltdf-news-review-stars-all {
+		
+		.eltdf-nr-star {
+			padding: 0 1px;
+			vertical-align: top;
+			font-size: 13px;
+			line-height: inherit;
+		}
+	}
+}
+/* ==========================================================================
+	News Reviews style - end
+	========================================================================== */

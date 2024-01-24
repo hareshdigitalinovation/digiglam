@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Latest News Widget style - begin
+   ========================================================================== */
+
+.widget.eltdf-news-latest-news-widget {
+	display: inline-block;
+	vertical-align: middle;
+	
+	.eltdf-news-lnw-title-holder {
+		display: inline-block;
+		vertical-align: middle;
+		
+		&:after {
+			content: '|';
+			display: inline-block;
+			vertical-align: middle;
+			color: inherit;
+			margin: 0 7px;
+		}
+	}
+	
+	.eltdf-news-lnw-slider-holder {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 200px;
+	}
+	
+	.eltdf-news-lnw-slider {
+		
+		.eltdf-news-lnw-slide {
+			padding: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Latest News Widget style - end
+   ========================================================================== */

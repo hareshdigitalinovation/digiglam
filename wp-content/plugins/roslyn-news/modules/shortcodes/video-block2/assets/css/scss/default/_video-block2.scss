@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Video Block 2 style - begin
+   ========================================================================== */
+
+.eltdf-video-block2{
+
+    .eltdf-news-block-part-featured,
+    .eltdf-news-block-part-non-featured{
+        width: 100%;
+        display: block;
+    }
+
+    .eltdf-news-block-part-featured{
+        .eltdf-video-layout1-item{
+            .eltdf-ni-content{
+                display: none;
+            }
+
+            .eltdf-ni-inner{
+                margin: 0;
+            }
+        }
+    }
+
+    .eltdf-news-block-part-non-featured{
+        .eltdf-news-item{
+            width: 25%;
+        }
+    }
+}
+
+/* ==========================================================================
+   Video Block 2 style - end
+   ========================================================================== */

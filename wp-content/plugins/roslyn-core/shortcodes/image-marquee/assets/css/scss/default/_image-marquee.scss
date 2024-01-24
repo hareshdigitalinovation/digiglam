@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Image Marquee shortcode style - begin
+   ========================================================================== */
+    .eltdf-image-marquee-holder {
+        position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		overflow: hidden;
+        width: 100%;
+
+        .eltdf-image-marquee {
+            position:relative;
+        }
+
+        .eltdf-image {
+            display: inline-block;
+
+            img {
+                width: auto;
+                max-width: unset;
+                vertical-align: middle;
+            }
+         
+            &.eltdf-original {
+                position: relative;
+            }
+
+            &.eltdf-aux {
+                position: absolute;
+                top:0;
+            }
+        } 
+        
+        &.eltdf-im-full-height {
+            height: 100vh;
+
+            .eltdf-image {
+                height: 100vh;
+
+                img {
+                    height: 100vh;
+                    width: auto;
+                    max-width: unset;
+                    vertical-align: middle;
+                }
+            }
+        }
+   
+        &.eltdf-im-with-content {
+            .eltdf-im-content-holder {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: rgba(0,0,0,.75);
+                z-index: 10;
+            }
+
+            .eltdf-im-title {
+                color: #fff;
+                margin-bottom: 40px;
+
+                .eltdf-im-bold-title {
+                    display: block;
+                    font-weight: 700;
+                    font-family: $default-heading-font;
+                }
+
+                .eltdf-im-regular-title {
+                    display: block;
+                    font-weight: 400;
+                    font-family: $default-text-font;
+                }
+            }
+
+            .eltdf-im-btn {
+                background-color: #fff;
+                color: $first-main-color;
+
+                &:hover {
+                    color: #fff !important;
+                    border-color: #fff !important;
+                }
+            }
+        }
+   }
+/* ==========================================================================
+	Image Marquee shortcode style - begin
+	========================================================================== */

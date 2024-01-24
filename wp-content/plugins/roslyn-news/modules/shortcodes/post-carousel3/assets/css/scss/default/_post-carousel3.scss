@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Post Carousel 3 layout style - begin
+   ========================================================================== */
+
+.eltdf-post-carousel3 {
+	
+	&.eltdf-news-skin-light {
+		
+		.eltdf-owl-slider {
+			
+			.owl-nav {
+				
+				.owl-prev,
+				.owl-next {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.eltdf-layout8-item{
+		.eltdf-ni-image-holder {
+			&:hover:after{
+				background: -webkit-linear-gradient(rgba(255,255,255,.1),rgba(0,0,0, .3));
+				background: -moz-linear-gradient(rgba(255,255,255,.1),rgba(0,0,0, .3));
+				background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0, .3));
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Post Carousel 3 layout style  - end
+   ========================================================================== */

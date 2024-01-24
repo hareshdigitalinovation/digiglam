@@ -20,13 +20,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'digiglam' );
+define( 'DB_NAME', 'u778916805_digiglam' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'u778916805_digiglam' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'Ovc9]0Rr' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -94,3 +94,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+
+
+/** errors */
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);

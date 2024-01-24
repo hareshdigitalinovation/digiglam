@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Layout 6 style - begin
+   ========================================================================== */
+
+.eltdf-layout6-item {
+	
+	.eltdf-ni-inner {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+
+		.eltdf-news-columns-1 &{
+			border-bottom: 1px solid $default-border-color;
+			padding-bottom: 28px;
+		}
+		
+		> div {
+			position: relative;
+			display: table-cell;
+			vertical-align: top;
+			width: 50%;
+		}
+	}
+	
+	.eltdf-ni-image-holder {
+		padding-left: 40px;
+	}
+	
+	.eltdf-ni-image-inner {
+		position: relative;
+	}
+	
+	.eltdf-ni-content {
+		padding-right: 45px;
+	}
+	
+	.eltdf-ni-info-top {
+		margin-bottom: 8px;
+	}
+	
+	.eltdf-ni-info-bottom {
+		margin-top: 22px;
+	}
+	
+	.eltdf-post-excerpt-holder {
+		margin-top: 14px;
+	}
+
+	.eltdf-blog-share{
+		padding-top: 15px;
+		float: right;
+	}
+}
+/* ==========================================================================
+   Layout 6 shortcode style - end
+   ========================================================================== */

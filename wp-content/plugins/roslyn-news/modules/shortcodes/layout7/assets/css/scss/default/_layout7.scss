@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Layout 7 style - begin
+   ========================================================================== */
+
+.eltdf-layout7-item {
+	
+	.eltdf-ni-inner,
+	.eltdf-ni-image-holder {
+		@include eltdfRelativeHolderLayout();
+	}
+	
+	.eltdf-ni-content {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 30px 47px 41px;
+		box-sizing: border-box;
+	}
+	
+	.eltdf-ni-info-top {
+		margin-bottom: 8px;
+	}
+	
+	.eltdf-ni-info-bottom {
+		margin-top: 18px;
+		margin-bottom: 15px;
+	}
+}
+/* ==========================================================================
+   Layout 7 shortcode style - end
+   ========================================================================== */

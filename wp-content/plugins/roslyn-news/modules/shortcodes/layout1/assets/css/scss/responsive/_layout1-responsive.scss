@@ -1,0 +1,9 @@
+.eltdf-layout1-item{
+    @include ipad-portrait{
+        padding-bottom: 30px !important;
+
+        .eltdf-ni-inner > div{
+            width: 100%;
+        }
+    }
+}

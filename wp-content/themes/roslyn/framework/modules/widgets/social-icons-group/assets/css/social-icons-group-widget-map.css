@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Social Icons Group widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+.eltdf-social-icons-group-widget.eltdf-square-icons {
+  height: 62px;
+  overflow: hidden;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons .eltdf-social-icon-widget-holder {
+  position: relative;
+  width: 61px;
+  height: 62px;
+  line-height: 62px;
+  margin: 0 -1px 0 0;
+  font-size: 18px;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons .eltdf-social-icon-widget-holder:hover {
+  background-color: #000;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons .eltdf-social-icon-widget-holder:hover .eltdf-social-icon-widget {
+  color: #fff;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons.text-align-center {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons.eltdf-light-skin .eltdf-social-icon-widget-holder {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons.eltdf-light-skin .eltdf-social-icon-widget-holder:hover {
+  background-color: #fff;
+}
+
+.eltdf-social-icons-group-widget.eltdf-square-icons.eltdf-light-skin .eltdf-social-icon-widget-holder:hover .eltdf-social-icon-widget {
+  color: #000;
+}
+
+.eltdf-social-icons-group-widget .eltdf-social-icon-widget-holder {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  text-align: center;
+}
+
+.eltdf-social-icons-group-widget .eltdf-social-icon-widget-holder:first-child {
+  margin-left: 0;
+}
+
+.eltdf-social-icons-group-widget .eltdf-social-icon-widget-holder:last-child {
+  margin-right: 0;
+}
+
+.page-template-blog-standard .eltdf-sidebar .eltdf-social-icons-group-widget.eltdf-square-icons .eltdf-social-icon-widget-holder,
+.single-post .eltdf-sidebar .eltdf-social-icons-group-widget.eltdf-square-icons .eltdf-social-icon-widget-holder {
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+}
+
+/* ==========================================================================
+   Social Icons Group widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=social-icons-group-widget-map.css.map */

@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Post Carousel 5 layout style - begin
+   ========================================================================== */
+
+.eltdf-post-carousel5 {
+
+	.eltdf-layout5-item{
+
+		.eltdf-ni-content{
+			left: 0;
+			top: 100%;
+			width: 100%;
+			padding-top: 25px;
+
+			.eltdf-post-title {
+				margin-top: 4px;
+			}
+
+			.eltdf-post-info-author {
+				display: none;
+			}
+		}
+	}
+
+	&.eltdf-post-carousel5-with-title {
+		display: flex;
+		background-color: #f9f9f9;
+		padding: 100px 0;
+
+		.eltdf-post-carousel5-holder {
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			width: 20%;
+			color: $default-text-color;
+		}
+		
+		.eltdf-post-carousel5-title-holder {
+			padding: 20px 75px;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: baseline;
+			
+			> span {
+				font-family: $additional-font;
+				font-size: 74px;
+				width: 80%;
+				line-height: 1.5em;
+				text-align: center;
+				padding-bottom: 15px;
+			}
+		}
+		
+		.eltdf-owl-slider {
+		    width: 80%;
+
+		    .owl-dots {
+		    	bottom: -50px;
+		    	position: relative;
+		    }
+
+		    .owl-dot {
+
+		    	span {
+					background-color: $default-border-color;
+		    	}
+
+		    	&.active {
+
+		    		span {
+		    			background-color: $default-text-color;
+		    		}
+		    		
+		    	}
+		    }
+		}
+	}
+	
+	&.eltdf-news-skin-light {
+		
+		.eltdf-owl-slider {
+			
+			.owl-dots {
+				
+				.owl-dot {
+					
+					span {
+						background-color: rgba($default-heading-color, .6);
+					}
+					
+					&:hover,
+					&.active {
+						
+						span {
+							background-color: $default-heading-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Post Carousel 5 layout style  - end
+   ========================================================================== */

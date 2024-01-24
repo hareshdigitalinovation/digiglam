@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Layout 8 style - begin
+   ========================================================================== */
+
+.eltdf-news-holder.eltdf-layout8 {
+	
+	.eltdf-news-list-inner {
+		counter-reset: pagination;
+	}
+	
+	$columns_space_label: ('no', 'tiny', 'small', 'normal', 'medium', 'large', 'huge' );
+	$columns_space_width: (0, 5, 10, 15, 20, 25, 40);
+	
+	@for $i from 0 to length($columns_space_label) {
+		&.eltdf-#{nth($columns_space_label,$i+1)}-space {
+			$column_width: nth($columns_space_width,$i+1);
+			
+			.eltdf-layout8-item {
+				
+				&:after {
+					$right_pos: #{$column_width + 20}px;
+					
+					right: $right_pos;
+				}
+			}
+		}
+	}
+}
+
+.eltdf-layout8-item {
+	position: relative;
+	
+	.eltdf-ni-item-inner {
+		@include eltdfRelativeHolderLayout();
+	}
+	
+	.eltdf-ni-image-holder {
+		@include eltdfRelativeHolderLayout();
+
+		&:hover{
+			cursor: grab;
+
+			.eltdf-ni-content {
+				opacity: 1;
+				@include eltdfTransition(all .2s ease-out);
+			}
+		}
+	}
+	
+	.eltdf-ni-content {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 30px 40px 35px;
+		box-sizing: border-box;
+		opacity: 0;
+		@include eltdfTransition(all .2s ease-in);
+		z-index: 99;
+
+		.eltdf-ni-info {
+			padding-top: 9px;
+		}
+	}
+}
+/* ==========================================================================
+   Layout 8 shortcode style - end
+   ========================================================================== */

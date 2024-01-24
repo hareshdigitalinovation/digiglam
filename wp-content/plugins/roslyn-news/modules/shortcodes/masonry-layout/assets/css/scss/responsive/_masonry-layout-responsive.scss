@@ -1,0 +1,60 @@
+.eltdf-news-holder.eltdf-masonry-layout{
+
+	@include laptop-landscape-large {
+
+		$gallery_columns_number: ('5', '6');
+			
+		@for $i from 0 to length($gallery_columns_number) {
+			&.eltdf-news-columns-#{nth($gallery_columns_number,$i+1)} {
+				
+				.eltdf-news-item.eltdf-masonry-size-large-width,
+				.eltdf-news-item.eltdf-masonry-size-large-width-height{
+					width: 66.67%;
+				}
+
+				.eltdf-masonry-layout-sizer{
+					width: 33.33%;
+				}
+			}
+		}
+	}
+
+
+	@include ipad-landscape {
+
+		$gallery_columns_number: ('4', '5', '6');
+			
+		@for $i from 0 to length($gallery_columns_number) {
+			&.eltdf-news-columns-#{nth($gallery_columns_number,$i+1)} {
+				
+				.eltdf-news-item.eltdf-masonry-size-large-width,
+				.eltdf-news-item.eltdf-masonry-size-large-width-height{
+					width: 100%;
+				}
+
+				.eltdf-masonry-layout-sizer{
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	@include phone-landscape {
+
+		$gallery_columns_number: ('2', '3', '4', '5', '6');
+			
+		@for $i from 0 to length($gallery_columns_number) {
+			&.eltdf-news-columns-#{nth($gallery_columns_number,$i+1)} {
+				
+				.eltdf-news-item.eltdf-masonry-size-large-height{
+					width: 100%;
+				}
+
+				.eltdf-masonry-layout-sizer{
+					width: 100%;
+				}
+			}
+		}
+	}
+
+}

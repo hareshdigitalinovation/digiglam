@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Layout 5 style - begin
+   ========================================================================== */
+
+.eltdf-news-layout5-widget{
+    .eltdf-ni-content{
+        padding: 0 15%;
+    }
+}
+
+.eltdf-layout5 {
+    .eltdf-layout5-item {
+        .eltdf-ni-content {
+            padding-top: 23px;
+
+            .entry-title {
+                padding-top: 8px;
+            }
+        }
+    }
+
+    .eltdf-news-load-more-pagination {
+        .eltdf-btn.eltdf-btn-outline:not(.eltdf-btn-custom-border-hover) {
+            color: $default-heading-color;
+            border-color: $default-heading-color;
+
+            &:hover{
+                .eltdf-btn-line {
+                    background-color:  $default-heading-color;
+                }
+            }
+        }
+    }
+
+}
+
+/* ==========================================================================
+   Layout 5 style - begin
+   ========================================================================== */

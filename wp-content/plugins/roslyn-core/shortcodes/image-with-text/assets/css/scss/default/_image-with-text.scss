@@ -1,0 +1,185 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.eltdf-image-with-text-holder {
+    @include eltdfRelativeHolderLayout();
+	
+	&.eltdf-has-shadow {
+		
+		.eltdf-iwt-image {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	.eltdf-iwt-image {
+		@include eltdfRelativeHolderLayout();
+		@include eltdfTransition(all 0.3s);
+		
+		a, img {
+			position: relative;
+			display: block;
+		}
+
+		&:hover {
+			box-shadow: 0px 6px 30px 0px rgba(203, 203, 203, 0.46);
+			@include eltdfTransform(translateY(-2px));
+
+			+ .eltdf-iwt-text-holder .eltdf-iwt-title {
+		    	&:before {
+					@include eltdfTransform(translateX(100%));
+		    	}
+			}
+		}
+	}
+	
+	.eltdf-iwt-text-holder {
+		@include eltdfRelativeHolderLayout();
+	}
+	
+	.eltdf-iwt-title {
+		margin: 32px 0 0;
+		display: inline-block;
+		position: relative;
+	    font-family: $additional-font;
+	    line-height: 1em;
+	    cursor: pointer;
+
+	    &:hover {
+
+	    	&:before {
+				@include eltdfTransform(translateX(100%));
+	    	}
+	    }
+
+	    &:before {
+	    	background: #fff;
+	    	content: "";
+	    	width: 100%;
+	    	padding: 58px;
+	    	height: 100%;
+	    	left: -19px;
+	    	z-index: -1;
+	    	top: -6px;
+	    	right: 5px;
+	    	position: absolute;
+	    	display: inline-block;
+	    	@include eltdfTransitionTransform(0.3s);
+	    	@include eltdfTransform(translateX(0));
+	    }
+
+		&:after {
+			background-image: url('../img/hover-landing.svg');
+			content: "";
+			width: 100%;
+			padding: 58px;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			left: -19px;
+			z-index: -2;
+			top: -6px;
+			right: 5px;
+			position: absolute;
+			display: inline-block;
+		}
+	}
+	
+	.eltdf-iwt-text {
+		margin: 14px 0 0;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-custom-link {
+		
+		.eltdf-iwt-image {
+			
+			a {
+				@include eltdfImageOverlayHoverStyle();
+
+				&:after {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-lightbox {
+		
+		.eltdf-iwt-image {
+			
+			a {
+				@include eltdfImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-zoom {
+		
+		.eltdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include eltdfTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include eltdfTransform(scale(1));
+				@include eltdfTransitionTransform(.3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.eltdf-image-behavior-grayscale {
+		
+		.eltdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include eltdfTransition(all .3s ease-in-out);
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

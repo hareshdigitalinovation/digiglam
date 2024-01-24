@@ -1,0 +1,24 @@
+/* ==========================================================================
+   BLock 2 style - responsive begin
+   ========================================================================== */
+
+.eltdf-news-holder {
+    &.eltdf-block1 {
+        .eltdf-news-block-part-featured,
+        .eltdf-news-block-part-non-featured{
+            @include ipad-landscape{
+                width: 100%;
+            }
+        }
+
+        .eltdf-ni-info > div.eltdf-post-info-author {
+            @include laptop-landscape-mac {
+                padding-top: 12px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   BLock 2 style - responsive end
+   ========================================================================== */
