@@ -73,9 +73,14 @@ function custom_login_popup_scripts() {
                 $('#custom-login-popup').fadeOut();
                 $('#custom-login-link').show();
             });
+            $('.BacktoChange').on('click', function() {
+                $('#enter-otp-section').hide();
+                $('#otp-section').show();
+            });
 
+            
             // Handle OTP request
-            $('#custom-get-otp-btn').on('click', function() {
+            $(document).on("click","#custom-get-otp-btn,.Resend_code",function() {
                 var email = $('#custom-email').val();
 
                 if(email!=''){
@@ -91,9 +96,11 @@ function custom_login_popup_scripts() {
 	                    success: function(response) {
 	                        var response = $.parseJSON(response);
 	                        if(response.status){
+                                $('.emailTxt').text(email);
 	                        	$('#custom-token').val(response.token);
 	                        	$('#otp-section').hide();
-                				$('#enter-otp-section').show();								
+                				$('#enter-otp-section').show();
+                                timer(60);							
 	                        }else{
 	                        	$('.Mail_err').html('something went wrong while sending otp!');
 	                        }
@@ -104,6 +111,36 @@ function custom_login_popup_scripts() {
 	            	$('.Mail_err').html('Enter valid email address!');
 	            }
             });
+
+            let timerOn = true;
+
+            function timer(remaining) {
+              var m = Math.floor(remaining / 60);
+              var s = remaining % 60;
+              
+              m = m < 10 ? '0' + m : m;
+              s = s < 10 ? '0' + s : s;
+              document.getElementById('timer').innerHTML = m + ':' + s;
+              remaining -= 1;
+              
+              if(remaining >= 0 && timerOn) {
+                setTimeout(function() {
+                    timer(remaining);
+                }, 1000);
+                return;
+              }
+
+              if(!timerOn) {
+                // Do validate stuff here
+                return;
+              }
+              
+              // Do timeout stuff here
+              $('#timer').addClass("Resend_code");
+              $('#timer').html('Resend code');
+            }
+
+            
         });
     </script>
     <?php
@@ -115,13 +152,30 @@ function custom_login_popup_html() {
     ob_start(); ?>
     <!-- Button to trigger the modal -->
     <?php if(is_user_logged_in()){ ?>
-    	<a href="javascript:;"><i class="eltdf-icon-font-awesome fa fa-user"></i></a>
+    	<!-- <a href="javascript:;"><i class="eltdf-icon-font-awesome fa fa-user"></i></a>
     	<ul>
     		<li><a href="">My Account</a></li>
-    		<li><a href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></li>
-    	</ul>
+    		<li><a href="<?php echo wp_logout_url( home_url() ); ?>">Log out</a></li>
+    	</ul> -->
+        <div class="dropdown login_account">
+            <a href="javascript:;" class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="eltdf-icon-font-awesome fa fa-user"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <li>
+                    <span class="item_outer">
+                        <a href="#">My Account</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="item_outer">
+                        <a href="<?php echo wp_logout_url(home_url()); ?>">Log out</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
 	<?php }else{?>
-		<a id="model_button" class="btn btn-info btn-lg model_button_outline" data-toggle="modal" data-target="#custom-login-modal">Login</a>
+		<a id="model_button" class="btn btn-info btn-lg model_button_outline" data-toggle="modal" data-target="#custom-login-modal">Log in</a>
 	<?php } ?>
 
     <!-- Modal -->
@@ -137,27 +191,38 @@ function custom_login_popup_html() {
                 <div class="modal-body" id="otp-section">
                     <!-- Your initial form can go here -->
                     <form>
-                        <label for="custom-email">Email:</label>
-                        <input type="email" id="custom-email" name="custom-email" required>
-						<span class="Mail_err" style="color: red;"></span>
+                        <!-- <label for="custom-email">Email:</label> -->
+                        <input type="email" id="custom-email" name="custom-email" placeholder="e-mail*" required>
+                        <!-- <input size="40" id="custom-email" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="e-mail*" value="" type="email" name="custom-email"> -->
+						<span class="Mail_err" style="color: red !important;"></span>
                         <button type="button" class="btn btn-primary" id="custom-get-otp-btn">Get OTP</button>
                     </form>
+
+                    <div id="loginSignUpSeparator">
+                        <span class="textInSeparator">or</span>
+                    </div>
 
                     <?php  echo do_shortcode("[xs_social_login provider='google' class='custom-class' btn-text='Button Text for Google']"); ?>
                 </div>
                 <div class="modal-body" id="enter-otp-section" style="display: none;">
                     <!-- OTP input form -->
+                    <div class="backtochangeTxt">
+                        Please enter the OTP sent to<br>
+                        <span class="emailTxt"></span><a class="BacktoChange" href="javascript:;">Change</a>
+                    </div>
                     <form>
-                        <label for="custom-otp">Enter OTP:</label>
-                        <input type="text" id="custom-otp" name="custom-otp" required>
+                        <!-- <label for="custom-otp">Enter OTP:</label> -->
+                        <input type="text" id="custom-otp" name="custom-otp" placeholder="Enter OTP*" required>
                         <input type="hidden" id="custom-token" name="token" required>
-						<span class="Otp_err" style="color: red;"></span>
-                        <button type="button" class="btn btn-success" id="custom-submit-otp-btn">Submit OTP</button>
+						<span class="Otp_err" style="color: red !important;"></span>
+                        <button type="button" class="btn btn-success" id="custom-submit-otp-btn">Verify</button>
+
+                        <div class="resendText">Not received your code? <a href="javascript:;" id="timer" class="resendCode">Resend code</a></div>
                     </form>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+                </div> -->
             </div>
 
         </div>
@@ -261,7 +326,7 @@ function custom_get_otp() {
 	$send=customEmailsendWithTemplate($toEmail, $subj, $body);
 
     // Return the OTP
-    echo json_encode(array('token' => base64_encode($otp),'status'=>$send));
+    echo json_encode(array('token' => base64_encode($otp),'status'=>$send)); //,'otp' => $otp
 
     wp_die();
 }
@@ -294,8 +359,8 @@ function customEmailsendWithTemplate($to, $subject, $body){
 function custom_login_register() {
     $email = sanitize_email($_POST['email']);
     $user = get_user_by( 'email', $email );
-    $password='';
-    $username='';
+    $password= random_int(10000000, 99999999);
+    $username=$email;
     if(!$user){
 		$new_user_id = wp_create_user($username, $password, $email);
 		$user = get_user_by( 'id', $new_user_id );
@@ -304,6 +369,11 @@ function custom_login_register() {
 	add_filter('authenticate',function($user, $email){
 		return $user;
 	}, 20, 3);
+
+    wp_set_auth_cookie( $user->ID, 0, 0);
+    wp_set_current_user($user->ID);
+    // The next line *really* seemed to help!
+    do_action('set_current_user');
 
     // Return the OTP
     echo json_encode(array('user' => $user,'status'=>true));

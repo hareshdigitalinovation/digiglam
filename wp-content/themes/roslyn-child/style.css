@@ -57,16 +57,22 @@ Template: roslyn
     height: 100%;
 }
 .modal.in .modal-dialog{transform: translate(0%,50%) !important;}
+.modal-dialog{width: 500px !important;}
 #custom-get-otp-btn,#custom-submit-otp-btn{
     position: relative;
     font-size: 12px;
     letter-spacing: .12em;
     text-transform: uppercase;
     transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
-    padding: 10px 25px;
-    color: #000;
-    background-color: #fff;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #000;
     border: 1px solid #000;
+    margin: 35px auto 0;
+    display: block;
+    width: 260px;
+    border-radius: 0;
+    font-weight: 600;
 }
 .modal-footer .btn-default{
     font-size: 12px;
@@ -85,36 +91,69 @@ label{text-transform: uppercase;letter-spacing: .12em;}
     /* font-weight: 800; */
     font-size: 20px;
 }
-#custom-email,#custom-otp{padding-top: 0;}
+#custom-email,#custom-otp{
+    border-bottom: 1px solid #000;
+    margin-bottom: 5px;
+}
 .eltdf-top-bar .eltdf-grid .eltdf-vertical-align-containers a{color: #000 !important;}
 #model_button{
-    font-family: inherit;
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    height: 100%;
+    /* padding: 0 22px; */
+    /* color: #000; */
+    line-height: 24px;
+    font-size: 13px;
+    letter-spacing: .15em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    -webkit-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 20px;
     width: auto;
-    outline: 0;
+}
+#model_button.model_button_outline{
+    background-color: transparent;
+    border: none;
+}
+#model_button::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 0;
+    background-color: currentColor;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    -webkit-transition: all .2s cubic-bezier(.43,.1,0,.82);
+    -o-transition: all .2s cubic-bezier(.43,.1,0,.82);
+    transition: all .2s cubic-bezier(.43,.1,0,.82);
+}
+#model_button:hover::before{
+    background-color: #fff;
+    height: 2px;
+    transition: all .2s cubic-bezier(.43,.1,0,.82);
+}
+#loginform .login-submit .button-primary{
+    position: relative;
     font-size: 12px;
     line-height: 2em;
     letter-spacing: .12em;
     font-weight: 400;
     text-transform: uppercase;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
     -webkit-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
-    -o-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
     transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
     padding: 13px 41px;
-    cursor: pointer;
-}
-#model_button.model_button_outline{
-    color: #000;
     background-color: transparent;
     border: 1px solid #000;
     overflow: hidden;
+    margin-top: 7px;
 }
-#model_button::after{
+/* #loginform .login-submit .button-primary::after{
     position: absolute;
     display: block;
     width: 100%;
@@ -133,8 +172,344 @@ label{text-transform: uppercase;letter-spacing: .12em;}
     background: currentColor;
     content: '';
 }
-#model_button:hover:after{
+#loginform .login-submit .button-primary:hover:after{
     -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
     transform: translateY(-100%);
+} */
+#xs-social-login-container{
+    padding-bottom: 0%;
+    margin-top: 10px;
+}
+#custom-login-modal .modal-content{
+    text-align: left;
+    color: #000;
+    border: none;
+    border-radius: unset;
+}
+#loginSignUpSeparator{
+    border-top: 1px solid #cbd2d6;
+    position: relative;
+    text-align: center;
+    font-size: 57.34%;
+    width: 400px;
+    margin: 30px auto 0;
+}
+#loginSignUpSeparator .textInSeparator{
+    background-color: #fff;
+    padding: 0 0.5em;
+    position: relative;
+    color: #000 !important;
+    top: -0.7em;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+#xs-social-login-container .xs-login__item{
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out !important;
+    margin: auto;
+    display: flex !important;
+    width: 260px;
+    font-weight: 400;
+    padding: 8px 15px !important;
+    background-color: #4285f4 !important;
+    border-radius: 0 !important;
+    justify-content: center;
+}
+#xs-social-login-container .xs-login--style-1 .xs-login__item--label{
+    color: #fff !important;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: unset;
+}
+#xs-social-login-container .xs-login--style-1 .xs-login__item--icon{
+    background-color: #ffffff !important;
+    width: 30px;
+    height: 30px;
+}
+#xs-social-login-container .met-social-google:before{
+    content: "" !important;
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-image: url(https://digiglam.ditests.com/wp-content/uploads/2024/01/Google.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#custom-login-modal:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+}
+.modal.in .modal-dialog{z-index: 1;}
+.modal-backdrop.in{z-index: unset !important;}
+.eltdf-news-holder .eltdf-ni-info>div.eltdf-post-info-author a{color: #000;}
+
+.login_account .dropdown-toggle{
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    padding: 0;
+    margin-left: 20px;
+    width: auto;
+}
+.login_account .dropdown-menu{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.03);
+    vertical-align: middle;
+    background-color: #000;
+    padding: 23px 0;
+    left: auto;
+    right: -10%;
+    border-radius: 0;
+}
+.login_account .dropdown-menu li{
+    width: 230px;
+    padding: 6px 32px;
+}
+.login_account .dropdown-menu li a{
+    font-size: 10px;
+    letter-spacing: .15em;
+    line-height: 20px;
+    color: #fff;
+    /* padding: 6px 32px; */
+    text-transform: uppercase;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+.login_account .dropdown-menu li .item_outer::before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    left: -20px;
+    color: inherit;
+    font-size: 18px;
+    width: 4px;
+    height: 4px;
+    opacity: 0;
+    border-radius: 100%;
+    background-color: #fff;
+    line-height: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: left .2s ease-in-out;
+    -o-transition: left .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.login_account .dropdown-menu li:hover .item_outer:before{
+    left: 0px;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+.login_account .dropdown-menu li .item_outer{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: padding .2s ease-in-out;
+    -o-transition: padding .2s ease-in-out;
+    transition: padding .2s ease-in-out;
+}
+.login_account .dropdown-menu li .item_outer:hover{
+    padding: 0 10px 0 14px;
+}
+.login_account .dropdown-menu li a:hover{
+    text-decoration: underline;
+    background-color: transparent;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+/* Membership-Account CSS */
+.eltdf-social-icons-group-widget .eltdf-social-icon-widget-holder{color: #000;}
+#pmpro_account-membership{
+    border: none !important;
+}
+#pmpro_account table{margin-bottom: 15px;}
+#pmpro_account .pmpro_box h2{margin-bottom: 20px;}
+#pmpro_account .pmpro_box thead th{
+    line-height: 24px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    /* font-weight: 800; */
+    text-transform: uppercase;
+}
+#pmpro_account .pmpro_box table tr{
+    border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#pmpro_account .pmpro_box tr td{border: none;}
+#pmpro_account .pmpro_box tr td{
+    padding: 10px;
+    line-height: 24px;
+    font-size: 14px;
+    /* letter-spacing: 0.1em; */
+}
+/* #pmpro_account .pmpro_box tr td a{color: #000 !important;} */
+#pmpro_actionlink-levels{
+    line-height: 24px;
+    font-size: 14px;
+    /* letter-spacing: 0.1em; */
+}
+#pmpro_account #pmpro_account-profile{
+    border: none;
+    width: 36%;
+    padding: 50px 20px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+#pmpro_account{
+    display: flex;
+    gap: 35px;
+}
+#pmpro_account-membership{
+    width: 64%;
+    padding: 50px 0px !important;
+    align-items: self-start;
+}
+#pmpro_account-profile ul{display: inline-block;}
+#pmpro_account-profile ul li{
+    list-style: none;
+    line-height: 24px;
+    font-size: 14px;
+    
+    color: #000;
+    /* text-transform: uppercase; */
+    padding: 20px 10px 20px 0;
+    border-bottom: 1px solid #000;
+}
+#pmpro_account-profile ul li strong{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.pmpro_actionlinks a{
+    line-height: 24px;
+    font-size: 14px;
+    /* letter-spacing: 0.1em; */
+}
+#pmpro_account-profile #pmpro_actionlinks{
+    margin-top: 15px;
+}
+
+
+/* Membership Level CSS */
+#pmpro_levels_table thead th, #pmpro_levels_table tbody th{text-align: center;}
+#pmpro_levels_table thead tr th{
+    line-height: 24px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background-color: #e1e1e1;
+}
+#pmpro_levels_table tr td{
+    border-right: 1px solid #d7d7d7;
+    padding: 10px;
+}
+#pmpro_levels_table tr td .pmpro_btn.pmpro_btn-select{
+    line-height: 24px;
+    font-size: 13px;
+    width: auto;
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #e1e1e1;
+}
+#pmpro_levels_table tr td strong,#pmpro_levels_table tr th{
+    line-height: 24px;
+    font-size: 13px;
+}
+.pmpro_actions_nav{margin-top: 15px;}
+#custom-login-modal .emailTxt{
+    color: #000 !important;
+}
+#custom-login-modal .BacktoChange{
+    color: #337ab7 !important;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.resendText{
+    margin-top: 17px;
+    text-align: center;
+}
+#custom-login-modal .Resend_code,#custom-login-modal .resendCode{
+    color: #000 !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Edit Profile CSS */
+.pmpro_submit .pmpro_btn-submit{
+    position: relative;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-weight: 600;
+}
+.pmpro_submit .pmpro_btn-cancel{
+    position: relative;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    padding: 12px 25px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-weight: 600;
+    margin-left: 15px;
+}
+.pmpro_submit .pmpro_btn-cancel:hover{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+#pmpro_actionlink-change-password{display: none;}
+.pmpro_member_profile_edit-fields input{
+    position: relative;
+    width: 100%;
+    margin: 0 0 24px;
+    padding: 10px 18px 10px 0;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: inherit;
+    color: #000;
+    background-color: transparent;
+    border-radius: 0;
+    outline: 0;
+    cursor: text;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+    border: none;
+    border-bottom: 1px solid #BFCBC2;
+}
+
+
+/* change Password CSS */
+.pmpro_change_password-field input{
+    padding: 5px;
+    margin-bottom: 15px;
 }
