@@ -233,3 +233,28 @@ function pmpro_deactivation() {
 }
 register_activation_hook( __FILE__, 'pmpro_activation' );
 register_deactivation_hook( __FILE__, 'pmpro_deactivation' );
+
+
+
+
+
+
+// add_filter('pmpro_level_cost', 'custom_currency_switcher_pmpro_level_cost', 10, 2);
+
+// function custom_currency_switcher_pmpro_level_cost($level_cost, $level) {
+//     $user_location = get_user_location();
+//     $currency = get_currency_based_on_location($user_location);
+//     $converted_cost = convert_currency($level_cost, $currency);
+
+//     return $converted_cost !== false ? $converted_cost : $level_cost;
+// }
+
+add_filter('pmpro_level_cost', 'custom_currency_conversion_pmpro_level_cost', 10, 2);
+
+function custom_currency_conversion_pmpro_level_cost($level_cost, $level) {
+    // Convert the level cost to the desired currency
+    $converted_cost = convert_currency($level_cost, 'EUR');  // Change 'EUR' to your desired currency code
+
+    return $converted_cost !== false ? $converted_cost : $level_cost;
+}
+

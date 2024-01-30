@@ -164,7 +164,7 @@ function custom_login_popup_html() {
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                 <li>
                     <span class="item_outer">
-                        <a href="#">My Account</a>
+                        <a href="<?php echo site_url()."/membership-account/"; ?>">My Account</a>
                     </span>
                 </li>
                 <li>
@@ -382,3 +382,126 @@ function custom_login_register() {
 }
 add_action('wp_ajax_custom_login_register', 'custom_login_register');
 add_action('wp_ajax_nopriv_custom_login_register', 'custom_login_register');
+
+
+
+/*---------------- Currency switcher ---------------------*/ 
+
+// function custom_currency_switcher_pmpro_level_cost($level_cost, $level)
+// {
+//     // Get user's location using the currency switcher plugin or another method
+//     $user_location = get_user_location(); // Implement your method here
+
+//     // Determine the currency based on the user's location
+//     $currency = get_currency_based_on_location($user_location); // Implement your method here
+
+//     // Convert the level cost to the selected currency
+//     $converted_cost = convert_currency($level_cost, $currency); // Implement your method here
+
+//     return $converted_cost;
+// }
+
+add_filter('pmpro_level_cost', 'custom_currency_switcher_pmpro_level_cost', 10, 2);
+
+function get_user_location() {
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $api_url = "http://www.geoplugin.net/json.gp?ip=$ip";
+
+    $response = wp_remote_get($api_url);
+
+    if (is_wp_error($response)) {
+        return false;
+    }
+
+    $body = wp_remote_retrieve_body($response);
+    $data = json_decode($body);
+
+    return $data->geoplugin_countryCode; // Return the country code
+}
+
+function get_currency_based_on_location($country_code) {
+    // Define a mapping of country codes to currency codes
+    $country_currency_map = array(
+        'US' => 'USD', // United States
+        'GB' => 'GBP', // United Kingdom
+        'CA' => 'CAD', // Canada
+        'AU' => 'AUD', // Australia
+        'FR' => 'EUR', // France
+        // Add more mappings as needed
+    );
+
+    global $country_currency_map;
+    error_log('Country Code: ' . $country_code);
+    error_log('Mapped Currency: ' . $country_currency_map[$country_code]);
+    return isset($country_currency_map[$country_code]) ? $country_currency_map[$country_code] : 'USD';
+
+    // // Check if the country code exists in the mapping
+    // if (isset($country_currency_map[$country_code])) {
+    //     return $country_currency_map[$country_code];
+    // } else {
+    //     // Default to a fallback currency if the country code is not found
+    //     return 'USD'; // Default to United States Dollar
+    // }
+}
+
+
+
+
+// function convert_currency($amount, $to_currency) {
+//     // Replace 'YOUR_API_KEY' with your actual API key
+//     $api_key = '62760006460d2a141b290044';
+
+//     // API endpoint for exchange rates (replace with the actual API endpoint)
+//     $api_url = "https://v6.exchangerate-api.com/v6/62760006460d2a141b290044/latest/USD";
+
+//     // Make a request to the API to get the latest exchange rates
+//     $response = wp_remote_get($api_url);
+
+//     if (is_wp_error($response)) {
+//         // Handle error
+//         return false;
+//     }
+
+//     $body = wp_remote_retrieve_body($response);
+//     $exchange_rates = json_decode($body, true);
+
+//     // Check if the target currency exists in the exchange rates data
+//     if (isset($exchange_rates[$to_currency])) {
+//         // Perform the currency conversion
+//         $conversion_rate = $exchange_rates[$to_currency];
+//         $converted_amount = $amount * $conversion_rate;
+
+//         return $converted_amount;
+//     } else {
+//         // Handle the case where the target currency is not found in the exchange rates data
+//         return false;
+//     }
+// }
+
+
+function convert_currency($amount, $to_currency) {
+    // Replace 'YOUR_API_KEY' with your actual ExchangeRate-API key
+    $api_key = '62760006460d2a141b290044';
+    $api_url = "https://v6.exchangerate-api.com/v6/62760006460d2a141b290044/latest/USD?apikey=$api_key";
+
+    $response = wp_remote_get($api_url);
+
+    if (is_wp_error($response)) {
+        // Handle error
+        return false;
+    }
+
+    $body = wp_remote_retrieve_body($response);
+    $data = json_decode($body, true);
+
+    if (isset($data['rates'][$to_currency])) {
+        $conversion_rate = $data['rates'][$to_currency];
+        $converted_amount = $amount * $conversion_rate;
+
+        return $converted_amount;
+    } else {
+        // Handle invalid currency code
+        return false;
+    }
+}
+

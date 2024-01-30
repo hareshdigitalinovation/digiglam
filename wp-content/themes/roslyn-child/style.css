@@ -373,12 +373,14 @@ label{text-transform: uppercase;letter-spacing: .12em;}
 #pmpro_account{
     display: flex;
     gap: 35px;
+    flex-wrap: wrap;
 }
 #pmpro_account-membership{
-    width: 64%;
+    width: 60.8%;
     padding: 50px 0px !important;
     align-items: self-start;
 }
+#pmpro_account-invoices{width: 100%;}
 #pmpro_account-profile ul{display: inline-block;}
 #pmpro_account-profile ul li{
     list-style: none;
@@ -406,18 +408,18 @@ label{text-transform: uppercase;letter-spacing: .12em;}
 
 /* Membership Level CSS */
 #pmpro_levels_table thead th, #pmpro_levels_table tbody th{text-align: center;}
-#pmpro_levels_table thead tr th{
+#pmpro_levels_table thead tr th,#pmpro_invoices_table thead tr th,#pmpro_cancel thead tr th{
     line-height: 24px;
     font-size: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     background-color: #e1e1e1;
 }
-#pmpro_levels_table tr td{
+#pmpro_levels_table tr td,#pmpro_invoices_table tr td, #pmpro_cancel tr td{
     border-right: 1px solid #d7d7d7;
     padding: 10px;
 }
-#pmpro_levels_table tr td .pmpro_btn.pmpro_btn-select{
+#pmpro_levels_table tr td .pmpro_btn.pmpro_btn-select, #pmpro_levels_table tr td .pmpro_btn.disabled{
     line-height: 24px;
     font-size: 13px;
     width: auto;
@@ -484,7 +486,7 @@ label{text-transform: uppercase;letter-spacing: .12em;}
     border: 1px solid #000;
 }
 #pmpro_actionlink-change-password{display: none;}
-.pmpro_member_profile_edit-fields input{
+.pmpro_member_profile_edit-fields input, .pmpro_checkout-fields input{
     position: relative;
     width: 100%;
     margin: 0 0 24px;
@@ -506,10 +508,168 @@ label{text-transform: uppercase;letter-spacing: .12em;}
     border: none;
     border-bottom: 1px solid #BFCBC2;
 }
+.pmpro_btn.pmpro_btn-submit-checkout{
+    position: relative;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-weight: 600;
+}
+.pmpro_checkout_gateway-none #pmpro_form h2{
+    padding: 15px !important;
+    border-top: 1px solid #BFCBC2;
+    border-bottom: 1px solid #BFCBC2;
+    background-color: #f9f9f9;
+    margin-bottom: 30px !important;
+}
+.pmpro_checkout_gateway-none #pmpro_form h2 .pmpro_checkout-h2-name{margin: 0 !important;}
+.pmpro_level_cost_text p strong{
+    font-size: 16px;
+}
+.pmpro_checkout-field.pmpro_checkout-field-bcountry #bcountry{
+    position: relative;
+    margin: 0 0 24px;
+    padding: 10px 18px 10px 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+    border: none;
+    border-bottom: 1px solid #BFCBC2;
+}
+#ExpirationMonth,#ExpirationYear{
+    position: relative;
+    margin: 0 0 24px;
+    padding: 10px 18px 10px 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+    border: none;
+    border-bottom: 1px solid #BFCBC2;
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
+/* Confirmation CSS */
+.pmpro_confirmation_wrap ul, .pmpro_invoice_wrap ul{
+    display: inline-block;
+}
+.pmpro_confirmation_wrap ul li, .pmpro_invoice_wrap ul li{
+    list-style: none;
+    line-height: 24px;
+    font-size: 13px;
+    color: #000;
+    /* text-transform: uppercase; */
+    padding: 5px 10px 5px 0;
+    /* border-bottom: 1px solid #000; */
+}
+.pmpro_confirmation_wrap ul li strong, .pmpro_invoice_wrap ul li strong{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.pmpro_invoice_details{display: block;}
+.pmpro_invoice_details > div strong{
+    list-style: none;
+    line-height: 24px;
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;  
+}
+.pmpro_invoice_details > div p{
+    margin: 0px 0 10px;
+}
 
-/* change Password CSS */
-.pmpro_change_password-field input{
-    padding: 5px;
-    margin-bottom: 15px;
+#pmpro_cancel p{font-size: 16px;}
+.pmpro_actionlinks{margin: 30px 0;}
+.pmpro_actionlinks .pmpro_btn-submit, .pmpro_actionlinks .pmpro_btn-cancel{
+    position: relative;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000 !important;
+    border-radius: 0;
+    font-weight: 600;
+}
+.pmpro_actionlinks .pmpro_btn-cancel{
+    color: #000 !important;
+    background-color: #fff !important;
+    margin-left: 15px;
+    text-decoration: none !important;
+}
+#pmpro_pricing_fields.pmpro_checkout h2{
+    padding: 15px !important;
+    border-top: 1px solid #BFCBC2;
+    border-bottom: 1px solid #BFCBC2;
+    background-color: #f9f9f9;
+    margin-bottom: 30px !important;
+}
+#pmpro_pricing_fields.pmpro_checkout h2 span{margin: 0 !important;}
+.pmpro_billing_wrap ul li{
+    list-style: none;
+    line-height: 24px;
+    font-size: 13px;
+    color: #000;
+    /* text-transform: uppercase; */
+    padding: 5px 10px 5px 0;
+}
+.pmpro_billing_wrap ul li strong{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.pmpro_member_log_out{margin: 50px 0;}
+.pmpro_member_log_out a{
+    position: relative;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    padding: 12px 25px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-weight: 600;
+}
+#pmpro_payment_information_fields .pmpro_checkout-fields{width: 50%;}
+#pmpro_payment_information_fields h2{
+    padding: 15px !important;
+    border-top: 1px solid #BFCBC2;
+    border-bottom: 1px solid #BFCBC2;
+    background-color: #f9f9f9;
+    margin-bottom: 30px !important;
+}
+#pmpro_payment_information_fields h2 span{margin: 0 !important;}
+#AccountNumber, #Expiry, #CVV{
+    margin: 0 0 10px !important;
+    padding: 10px 18px 10px 0 !important;
+    font-size: 13px;
+    line-height: 20px;
+    -webkit-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+    border: none !important;
+    border-bottom: 1px solid #BFCBC2 !important;
 }

@@ -594,3 +594,25 @@ if ( empty( $default_gateway ) ) {
 <?php do_action('pmpro_checkout_after_form'); ?>
 
 </div> <!-- end pmpro_level-ID -->
+
+
+
+<?php 
+
+add_filter('pmpro_checkout_level', 'custom_display_converted_price');
+
+function custom_display_converted_price($level) {
+    $converted_price = convert_currency($level->initial_payment, 'EUR');  // Change 'EUR' to your desired currency code
+
+    if ($converted_price !== false) {
+        echo '<p>Converted Price: ' . $converted_price . '</p>';
+    } else {
+        echo '<p>Currency conversion failed.</p>';
+    }
+
+    return $level;
+}
+
+
+?>
+
